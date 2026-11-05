@@ -1,13 +1,13 @@
 {% set name = "aeventkit" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aeventkit-{{ version }}.tar.gz
-  sha256: 16616fef98ba04aec6de8ea5e66b3cd0ad99a4de8f57a3878bff43d1dfb31ea2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/aeventkit-{{ version }}.tar.gz
+  sha256: 906f850e18f3f88bb9eb02d1c9296a791ee02fa0db1a3c8568a086289f26145a
 
 build:
   noarch: python
@@ -37,7 +37,7 @@ about:
   description: |
     The primary use cases of eventkit are to send events between loosely 
     coupled components and to compose all kinds of event-driven data pipelines.
-    
+
     Note: The eventkit PyPI name is now aeventkit but we still import eventkit.
   license: BSD-2-Clause
   license_file: LICENSE
