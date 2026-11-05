@@ -69,6 +69,11 @@ if [ -z "${DOCKER_IMAGE}" ]; then
     fi
 fi
 
+if [ -z "${DOCKER_PLATFORM}" ]; then
+    # this is set unconditionally in the variant configs -> no fallback
+    DOCKER_PLATFORM=$(cat .ci_support/${CONFIG}.yaml | grep '^DOCKER_PLATFORM:$' -A 1 | tail -n 1 | cut -b 3-)
+fi
+
 mkdir -p "$ARTIFACTS"
 DONE_CANARY="$ARTIFACTS/conda-forge-build-done-${CONFIG}"
 rm -f "$DONE_CANARY"

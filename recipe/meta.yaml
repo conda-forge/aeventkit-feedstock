@@ -17,11 +17,10 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core
+    - uv-build >=0.10.10,<0.14.0
     - pip
   run:
     - python >={{ python_min }}
-    - numpy
 
 test:
   imports:
