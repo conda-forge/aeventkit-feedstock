@@ -199,6 +199,3 @@ Feedstock Maintainers
 
 * [@alphasierrahotel](https://github.com/alphasierrahotel/)
 
-
-<!-- dummy commit to enable rerendering -->
-
